@@ -1,0 +1,1632 @@
+---
+import {
+  ArrowLeft,
+  ArrowRight,
+  Award,
+  Bookmark,
+  Compass,
+  Info,
+  Mail,
+  MapPin,
+  Menu,
+  MessageSquare,
+  Palette,
+  Phone,
+  Sparkles,
+  Truck,
+  UserCheck,
+  X,
+} from "@lucide/astro";
+import "../styles/global.css";
+import { Image } from "astro:assets";
+---
+
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Pimp My Cake | Bolos Artísticos e Doces Finos em Campo Grande/MS
+    </title>
+    <meta
+      name="description"
+      content="Protótipo fictício de uma confeitaria boutique especializada em bolos artísticos, doces finos e experiências gastronômicas sofisticadas."
+    />
+
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Pimp My Cake | Bolos Artísticos e Doces Finos"
+    />
+    <meta
+      property="og:description"
+      content="Protótipo conceitual de confeitaria boutique de alto luxo. Jardim dos Estados, Campo Grande/MS."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1535141192574-5d4897c13636?auto=format&fit=crop&q=80&w=1200"
+    />
+
+    <!-- Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="antialiased">
+    <!-- HEADER FIXO E ELEGANTE -->
+    <header
+      id="header"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-6 px-6 lg:px-16 flex items-center justify-between"
+    >
+      <a
+        href="#inicio"
+        class="text-xl lg:text-2xl font-light tracking-[0.2em] uppercase text-luxuryText hover:opacity-75 transition-opacity"
+      >
+        Pimp My Cake
+      </a>
+
+      <!-- Navegação Desktop -->
+      <nav
+        class="hidden md:flex items-center space-x-8 text-xs tracking-[0.1em] uppercase font-medium"
+      >
+        <a
+          href="#inicio"
+          class="hover:text-luxuryGray transition-colors duration-200">Início</a
+        >
+        <a
+          href="#sobre"
+          class="hover:text-luxuryGray transition-colors duration-200">Sobre</a
+        >
+        <a
+          href="#criacoes"
+          class="hover:text-luxuryGray transition-colors duration-200"
+          >Criações</a
+        >
+        <a
+          href="#diferenciais"
+          class="hover:text-luxuryGray transition-colors duration-200"
+          >Diferenciais</a
+        >
+        <a
+          href="#experiencia"
+          class="hover:text-luxuryGray transition-colors duration-200"
+          >Experiência</a
+        >
+        <a
+          href="#encomendas"
+          class="hover:text-luxuryGray transition-colors duration-200"
+          >Encomendas</a
+        >
+      </nav>
+
+      <div class="hidden lg:block">
+        <a
+          href="#encomendas"
+          class="luxury-button text-xs border border-luxuryText px-6 py-3 hover:bg-luxuryText hover:text-white inline-block"
+        >
+          Solicitar Encomenda
+        </a>
+      </div>
+
+      <!-- Mobile Menu Trigger -->
+      <button
+        id="menuBtn"
+        class="md:hidden text-luxuryText focus:outline-none"
+        aria-label="Abrir Menu"
+      >
+        <Menu class="w-6 h-6" />
+      </button>
+    </header>
+
+    <!-- MOBILE NAVIGATION OVERLAY -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-white z-40 translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-between p-8 pt-24 md:hidden"
+    >
+      <nav
+        class="flex flex-col space-y-6 text-lg tracking-[0.15em] uppercase font-light"
+      >
+        <a href="#inicio" class="mobile-link py-2 border-b border-gray-100"
+          >Início</a
+        >
+        <a href="#sobre" class="mobile-link py-2 border-b border-gray-100"
+          >Sobre</a
+        >
+        <a href="#criacoes" class="mobile-link py-2 border-b border-gray-100"
+          >Criações</a
+        >
+        <a
+          href="#diferenciais"
+          class="mobile-link py-2 border-b border-gray-100">Diferenciais</a
+        >
+        <a href="#experiencia" class="mobile-link py-2 border-b border-gray-100"
+          >Experiência</a
+        >
+        <a href="#encomendas" class="mobile-link py-2 border-b border-gray-100"
+          >Encomendas</a
+        >
+      </nav>
+
+      <div class="space-y-6">
+        <a
+          href="#encomendas"
+          class="mobile-link luxury-button text-center block text-xs border border-luxuryText w-full py-4 hover:bg-luxuryText hover:text-white"
+        >
+          Solicitar Encomenda
+        </a>
+        <div
+          class="text-[10px] text-luxuryGray tracking-widest uppercase text-center"
+        >
+          Campo Grande/MS
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section
+      id="inicio"
+      class="min-h-screen relative flex flex-col justify-end lg:justify-center pt-32 pb-16 px-6 lg:px-16 overflow-hidden bg-white"
+    >
+      <!-- Visual Background / Grid Editorial -->
+      <div
+        class="absolute right-0 top-0 w-full lg:w-1/2 h-[55vh] lg:h-full z-0"
+      >
+        <div class="relative w-full h-full">
+          <!-- Imagem do bolo de luxo editorial -->
+          <Image
+            src="https://images.unsplash.com/photo-1605563432942-0f863d9df42e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            crossorigin="anonymous"
+            alt="Bolo de Casamento de Luxo"
+            width="1200"
+            height="800"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-white via-white/50 lg:via-white/70 to-transparent"
+          >
+          </div>
+        </div>
+      </div>
+
+      <!-- Conteúdo do Hero -->
+      <div class="relative z-10 w-full lg:w-7/12 mt-[35vh] lg:mt-0">
+        <div class="space-y-6 lg:space-y-8 max-w-3xl">
+          <!-- Sutil tag de localização -->
+          <div
+            class="inline-flex items-center space-x-2 text-xs tracking-[0.2em] uppercase text-luxuryGray"
+          >
+            <span class="w-2 h-2 rounded-full bg-roseSophisticated"></span>
+            <span>Jardim dos Estados • Campo Grande/MS</span>
+          </div>
+
+          <h1 class="hero-title text-luxuryText">
+            Transformamos celebrações em obras de arte comestíveis.
+          </h1>
+
+          <p
+            class="editorial-text text-luxuryGray text-sm lg:text-base max-w-xl"
+          >
+            Bolos artísticos e doces autorais criados sob medida para momentos
+            extraordinários. Cada detalhe esculpido à mão para contar a sua
+            história de forma memorável.
+          </p>
+
+          <!-- Botões de Ação -->
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a
+              href="#encomendas"
+              class="luxury-button text-center text-xs bg-luxuryText text-white px-8 py-4 border border-luxuryText hover:bg-white hover:text-luxuryText"
+            >
+              Solicitar Encomenda
+            </a>
+            <a
+              href="#criacoes"
+              class="luxury-button text-center text-xs border border-luxuryText/20 text-luxuryText px-8 py-4 hover:border-luxuryText bg-white/50 backdrop-blur-sm"
+            >
+              Conhecer Criações
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divisor sutil no final do Hero -->
+      <div
+        class="absolute bottom-6 left-6 lg:left-16 hidden lg:flex items-center space-x-4 text-xs tracking-widest text-luxuryGray/60"
+      >
+        <span>SCROLL</span>
+        <span class="w-12 h-[1px] bg-luxuryGray/30"></span>
+      </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE -->
+    <section id="sobre" class="py-24 lg:py-32 px-6 lg:px-16 bg-luxuryLight">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center"
+        >
+          <!-- Coluna de Imagem / Editorial Layout -->
+          <div class="col-span-1 lg:col-span-5 relative reveal">
+            <div class="aspect-[3/4] overflow-hidden bg-neutral-200">
+              <Image
+                src="https://images.unsplash.com/photo-1709837167684-47d7ccf0ed89?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Confeiteira decorando doce fino"
+                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                width="1000"
+                height="667"
+              />
+            </div>
+            <!-- Elemento decorativo discreto em tom pastel -->
+            <div
+              class="absolute -bottom-6 -right-6 w-32 h-32 bg-roseSophisticated/40 -z-10"
+            >
+            </div>
+          </div>
+
+          <!-- Coluna de Texto -->
+          <div class="col-span-1 lg:col-span-7 space-y-8 reveal">
+            <div class="space-y-4">
+              <span
+                class="text-xs tracking-[0.2em] uppercase text-luxuryGray block"
+                >Filosofia Boutique</span
+              >
+              <h2
+                class="text-3xl lg:text-5xl font-light tracking-tight text-luxuryText"
+              >
+                A arte da confeitaria elevada ao extraordinário.
+              </h2>
+            </div>
+
+            <div
+              class="space-y-6 text-sm lg:text-base text-luxuryGray editorial-text"
+            >
+              <p>
+                Nascemos da paixão por unir alta confeitaria técnica e design
+                contemporâneo. No coração do Jardim dos Estados, em Campo
+                Grande, a <strong>Pimp My Cake</strong> cria experiências que vão
+                muito além do sabor; criamos memórias esculpidas.
+              </p>
+              <p>
+                Nossos bolos e doces são desenvolvidos através de uma curadoria
+                meticulosa de ingredientes mundiais combinada a técnicas
+                tradicionais da pâtisserie francesa. Sob o olhar detalhista e
+                autoral de nossa equipe, cada encomenda é única, executada com
+                precisão arquitetônica para coroar os momentos mais importantes
+                da sua vida.
+              </p>
+            </div>
+
+            <!-- Números Fictícios em Grid Minimalista -->
+            <div
+              class="grid grid-cols-3 gap-6 pt-8 border-t border-luxuryText/10"
+            >
+              <div>
+                <div class="text-2xl lg:text-4xl font-light text-luxuryText">
+                  12
+                </div>
+                <div
+                  class="text-[10px] lg:text-xs tracking-wider uppercase text-luxuryGray mt-1"
+                >
+                  Anos de Tradição
+                </div>
+              </div>
+              <div>
+                <div class="text-2xl lg:text-4xl font-light text-luxuryText">
+                  1.200
+                </div>
+                <div
+                  class="text-[10px] lg:text-xs tracking-wider uppercase text-luxuryGray mt-1"
+                >
+                  Celebrações Atendidas
+                </div>
+              </div>
+              <div>
+                <div class="text-2xl lg:text-4xl font-light text-luxuryText">
+                  98%
+                </div>
+                <div
+                  class="text-[10px] lg:text-xs tracking-wider uppercase text-luxuryGray mt-1"
+                >
+                  Clientes Recorrentes
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO CRIAÇÕES -->
+    <section id="criacoes" class="py-24 lg:py-32 px-6 lg:px-16 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 space-y-6 md:space-y-0"
+        >
+          <div class="space-y-4">
+            <span
+              class="text-xs tracking-[0.2em] uppercase text-luxuryGray block"
+              >Nosso Portfólio</span
+            >
+            <h2
+              class="text-3xl lg:text-5xl font-light tracking-tight text-luxuryText"
+            >
+              Criações de Assinatura
+            </h2>
+          </div>
+          <!-- Filtros elegantes para galeria -->
+          <div
+            class="flex flex-wrap gap-3 text-xs tracking-widest uppercase font-medium border-b border-gray-100 pb-2 w-full md:w-auto"
+          >
+            <button
+              onclick="filterGallery('todos')"
+              class="filter-btn active border-b-2 border-luxuryText pb-2 px-1 text-luxuryText transition-all"
+            >
+              Todos
+            </button>
+            <button
+              onclick="filterGallery('bolos')"
+              class="filter-btn border-b-2 border-transparent pb-2 px-1 text-luxuryGray hover:text-luxuryText transition-all"
+            >
+              Bolos Artísticos
+            </button>
+            <button
+              onclick="filterGallery('casamentos')"
+              class="filter-btn border-b-2 border-transparent pb-2 px-1 text-luxuryGray hover:text-luxuryText transition-all"
+            >
+              Casamentos
+            </button>
+            <button
+              onclick="filterGallery('doces')"
+              class="filter-btn border-b-2 border-transparent pb-2 px-1 text-luxuryGray hover:text-luxuryText transition-all"
+            >
+              Doces Finos
+            </button>
+            <button
+              onclick="filterGallery('sazonais')"
+              class="filter-btn border-b-2 border-transparent pb-2 px-1 text-luxuryGray hover:text-luxuryText transition-all"
+            >
+              Sazonais
+            </button>
+          </div>
+        </div>
+
+        <!-- Grid Editorial de Criações -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Item 1: Bolos Artísticos -->
+          <div class="gallery-item bolos group reveal">
+            <div
+              class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4 relative"
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=800"
+                alt="Bolo Artístico Moderno com Flores"
+                class="w-full h-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                width="800"
+                height="533"
+              />
+              <div
+                class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+              </div>
+              <div
+                class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm text-[10px] tracking-widest uppercase px-3 py-1 text-luxuryText"
+              >
+                Bolos Artísticos
+              </div>
+            </div>
+            <div class="space-y-1">
+              <h3
+                class="text-sm tracking-wider uppercase font-medium text-luxuryText"
+              >
+                Bolo Minimalista Escultural
+              </h3>
+              <p class="text-xs text-luxuryGray editorial-text">
+                Conceito monolítico adornado por pétalas de açúcar estilizadas e
+                texturas de gesso comestível.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: Casamentos -->
+          <div class="gallery-item casamentos group reveal" data-delay="100">
+            <div
+              class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4 relative"
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Bolo de Casamento Clássico e Elegante"
+                class="w-full h-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                width="800"
+                height="533"
+              />
+              <div
+                class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+              </div>
+              <div
+                class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm text-[10px] tracking-widest uppercase px-3 py-1 text-luxuryText"
+              >
+                Casamentos
+              </div>
+            </div>
+            <div class="space-y-1">
+              <h3
+                class="text-sm tracking-wider uppercase font-medium text-luxuryText"
+              >
+                Couture Wedding Cake
+              </h3>
+              <p class="text-xs text-luxuryGray editorial-text">
+                Estruturas imponentes de múltiplos andares, babados de papel de
+                arroz ultra finos e texturas etéreas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Doces Finos -->
+          <div class="gallery-item doces group reveal" data-delay="200">
+            <div
+              class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4 relative"
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800"
+                alt="Macarons de Baunilha e Flores"
+                class="w-full h-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                width="800"
+                height="533"
+              />
+              <div
+                class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+              </div>
+              <div
+                class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm text-[10px] tracking-widest uppercase px-3 py-1 text-luxuryText"
+              >
+                Doces Finos
+              </div>
+            </div>
+            <div class="space-y-1">
+              <h3
+                class="text-sm tracking-wider uppercase font-medium text-luxuryText"
+              >
+                Pâtisserie d'Art
+              </h3>
+              <p class="text-xs text-luxuryGray editorial-text">
+                Macarons metalizados, tartelettes decoradas com pó de ouro 24k e
+                trufas esculpidas em formatos orgânicos.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4: Coleções Sazonais -->
+          <div class="gallery-item sazonais group reveal" data-delay="300">
+            <div
+              class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4 relative"
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&q=80&w=800"
+                alt="Coleção Festiva de Chocolates Finos"
+                class="w-full h-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                width="800"
+                height="533"
+              />
+              <div
+                class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+              </div>
+              <div
+                class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm text-[10px] tracking-widest uppercase px-3 py-1 text-luxuryText"
+              >
+                Coleções Sazonais
+              </div>
+            </div>
+            <div class="space-y-1">
+              <h3
+                class="text-sm tracking-wider uppercase font-medium text-luxuryText"
+              >
+                Coleção Equinócio
+              </h3>
+              <p class="text-xs text-luxuryGray editorial-text">
+                Edições limitadas inspiradas nas estações do ano, com
+                ingredientes colhidos em época exata e embalagens de design.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DIFERENCIAIS -->
+    <section
+      id="diferenciais"
+      class="py-24 lg:py-32 px-6 lg:px-16 bg-luxuryLight"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 lg:mb-24 space-y-4">
+          <span class="text-xs tracking-[0.2em] uppercase text-luxuryGray block"
+            >Por que Pimp My Cake</span
+          >
+          <h2
+            class="text-3xl lg:text-5xl font-light tracking-tight text-luxuryText"
+          >
+            Os pilares da nossa exclusividade
+          </h2>
+          <div class="w-12 h-[1px] bg-luxuryText/20 mx-auto mt-6"></div>
+        </div>
+
+        <!-- Grid de Diferenciais (Cards Minimalistas com Ícones Lucide) -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
+        >
+          <!-- Card 1: Ingredientes Premium -->
+          <div
+            class="bg-white p-8 lg:p-10 border border-luxuryText/5 hover:border-luxuryText/20 transition-all duration-300 flex flex-col justify-between group reveal"
+          >
+            <div class="space-y-6">
+              <div
+                class="w-12 h-12 rounded-full bg-vanilla flex items-center justify-center text-luxuryText group-hover:scale-110 transition-transform duration-300"
+              >
+                <Award class="w-5 h-5 stroke-[1.5]" />
+              </div>
+              <h3
+                class="text-base tracking-wider uppercase font-medium text-luxuryText"
+              >
+                Ingredientes Premium
+              </h3>
+              <p class="text-sm text-luxuryGray editorial-text">
+                Chocolates de origem belga e francesa, favas de baunilha de
+                Madagascar e frutas selecionadas localmente em sua maturidade
+                ideal.
+              </p>
+            </div>
+            <div
+              class="pt-6 text-xs tracking-widest uppercase text-luxuryGray/60 group-hover:text-luxuryText transition-colors duration-300 mt-4"
+            >
+              Matéria-Prima Exclusiva
+            </div>
+          </div>
+
+          <!-- Card 2: Produção Artesanal -->
+          <div
+            class="bg-white p-8 lg:p-10 border border-luxuryText/5 hover:border-luxuryText/20 transition-all duration-300 flex flex-col justify-between group reveal"
+            data-delay="100"
+          >
+            <div class="space-y-6">
+              <div
+                class="w-12 h-12 rounded-full bg-roseSophisticated/40 flex items-center justify-center text-luxuryText group-hover:scale-110 transition-transform duration-300"
+              >
+                <Sparkles class="w-5 h-5 stroke-[1.5]" />
+              </div>
+              <h3
+                class="text-base tracking-wider uppercase font-medium text-luxuryText"
+              >
+                Produção Artesanal
+              </h3>
+              <p class="text-sm text-luxuryGray editorial-text">
+                Sem atalhos industriais ou misturas comerciais. Cada recheio,
+                cobertura e escultura decorativa é feita do zero, em ritmo
+                artesanal.
+              </p>
+            </div>
+            <div
+              class="pt-6 text-xs tracking-widest uppercase text-luxuryGray/60 group-hover:text-luxuryText transition-colors duration-300 mt-4"
+            >
+              Artesanato Puro
+            </div>
+          </div>
+
+          <!-- Card 3: Atendimento Exclusivo -->
+          <div
+            class="bg-white p-8 lg:p-10 border border-luxuryText/5 hover:border-luxuryText/20 transition-all duration-300 flex flex-col justify-between group reveal"
+            data-delay="200"
+          >
+            <div class="space-y-6">
+              <div
+                class="w-12 h-12 rounded-full bg-champagne flex items-center justify-center text-luxuryText group-hover:scale-110 transition-transform duration-300"
+              >
+                <UserCheck class="w-5 h-5 stroke-[1.5]" />
+              </div>
+              <h3
+                class="text-base tracking-wider uppercase font-medium text-luxuryText"
+              >
+                Atendimento Exclusivo
+              </h3>
+              <p class="text-sm text-luxuryGray editorial-text">
+                Apenas uma quantidade estritamente limitada de encomendas é
+                aceita a cada semana, garantindo atenção irrestrita ao seu
+                projeto.
+              </p>
+            </div>
+            <div
+              class="pt-6 text-xs tracking-widest uppercase text-luxuryGray/60 group-hover:text-luxuryText transition-colors duration-300 mt-4"
+            >
+              Luxo Silencioso
+            </div>
+          </div>
+
+          <!-- Card 4: Projetos Personalizados -->
+          <div
+            class="bg-white p-8 lg:p-10 border border-luxuryText/5 hover:border-luxuryText/20 transition-all duration-300 flex flex-col justify-between group reveal"
+          >
+            <div class="space-y-6">
+              <div
+                class="w-12 h-12 rounded-full bg-sageSuave/50 flex items-center justify-center text-luxuryText group-hover:scale-110 transition-transform duration-300"
+              >
+                <Compass class="w-5 h-5 stroke-[1.5]" />
+              </div>
+              <h3
+                class="text-base tracking-wider uppercase font-medium text-luxuryText"
+              >
+                Projetos Personalizados
+              </h3>
+              <p class="text-sm text-luxuryGray editorial-text">
+                Cada design é desenhado após um briefing que avalia o cenário,
+                flores do evento, identidade visual e temperamento da festa.
+              </p>
+            </div>
+            <div
+              class="pt-6 text-xs tracking-widest uppercase text-luxuryGray/60 group-hover:text-luxuryText transition-colors duration-300 mt-4"
+            >
+              Tailor-made Design
+            </div>
+          </div>
+
+          <!-- Card 5: Entrega Especializada -->
+          <div
+            class="bg-white p-8 lg:p-10 border border-luxuryText/5 hover:border-luxuryText/20 transition-all duration-300 flex flex-col justify-between group reveal"
+            data-delay="100"
+          >
+            <div class="space-y-6">
+              <div
+                class="w-12 h-12 rounded-full bg-sandLight flex items-center justify-center text-luxuryText group-hover:scale-110 transition-transform duration-300"
+              >
+                <Truck class="w-5 h-5 stroke-[1.5]" />
+              </div>
+              <h3
+                class="text-base tracking-wider uppercase font-medium text-luxuryText"
+              >
+                Entrega Especializada
+              </h3>
+              <p class="text-sm text-luxuryGray editorial-text">
+                Logística dedicada em veículo climatizado e suporte na montagem
+                local no local do evento com total segurança.
+              </p>
+            </div>
+            <div
+              class="pt-6 text-xs tracking-widest uppercase text-luxuryGray/60 group-hover:text-luxuryText transition-colors duration-300 mt-4"
+            >
+              Segurança & Suporte
+            </div>
+          </div>
+
+          <!-- Card 6: Design Autoral -->
+          <div
+            class="bg-white p-8 lg:p-10 border border-luxuryText/5 hover:border-luxuryText/20 transition-all duration-300 flex flex-col justify-between group reveal"
+            data-delay="200"
+          >
+            <div class="space-y-6">
+              <div
+                class="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center text-luxuryText group-hover:scale-110 transition-transform duration-300"
+              >
+                <Palette class="w-5 h-5 stroke-[1.5]" />
+              </div>
+              <h3
+                class="text-base tracking-wider uppercase font-medium text-luxuryText"
+              >
+                Design Autoral
+              </h3>
+              <p class="text-sm text-luxuryGray editorial-text">
+                Linguagem contemporânea inspirada em arquitetura brutalista,
+                arte barroca e alta-costura, desafiando a confeitaria
+                tradicional.
+              </p>
+            </div>
+            <div
+              class="pt-6 text-xs tracking-widest uppercase text-luxuryGray/60 group-hover:text-luxuryText transition-colors duration-300 mt-4"
+            >
+              Estética Própria
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO EXPERIÊNCIA (Layout Dividido) -->
+    <section id="experiencia" class="py-24 lg:py-32 px-6 lg:px-16 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center"
+        >
+          <!-- Coluna de Texto: O Processo -->
+          <div class="col-span-1 lg:col-span-6 space-y-10 reveal">
+            <div class="space-y-4">
+              <span
+                class="text-xs tracking-[0.2em] uppercase text-luxuryGray block"
+                >Jornada Gourmet</span
+              >
+              <h2
+                class="text-3xl lg:text-5xl font-light tracking-tight text-luxuryText"
+              >
+                Cada criação nasce de uma conversa, de uma história e de um
+                momento único.
+              </h2>
+            </div>
+
+            <!-- Passos do Processo Fictício -->
+            <div class="space-y-8">
+              <!-- Passo 1 -->
+              <div class="flex space-x-6 items-start">
+                <div
+                  class="text-sm font-medium text-luxuryText border-b border-luxuryText/30 pb-1 mt-1"
+                >
+                  01
+                </div>
+                <div class="space-y-1">
+                  <h4
+                    class="text-sm tracking-wider uppercase font-medium text-luxuryText"
+                  >
+                    Briefing Conceitual
+                  </h4>
+                  <p class="text-xs text-luxuryGray editorial-text">
+                    Alinhamento das inspirações visuais, paleta de cores e
+                    preferências estéticas para o desenvolvimento do conceito.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Passo 2 -->
+              <div class="flex space-x-6 items-start">
+                <div
+                  class="text-sm font-medium text-luxuryText border-b border-luxuryText/30 pb-1 mt-1"
+                >
+                  02
+                </div>
+                <div class="space-y-1">
+                  <h4
+                    class="text-sm tracking-wider uppercase font-medium text-luxuryText"
+                  >
+                    Curadoria de Sabores
+                  </h4>
+                  <p class="text-xs text-luxuryGray editorial-text">
+                    Degustação guiada das nossas assinaturas de massas, compotas
+                    artesanais e cremes sofisticados.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Passo 3 -->
+              <div class="flex space-x-6 items-start">
+                <div
+                  class="text-sm font-medium text-luxuryText border-b border-luxuryText/30 pb-1 mt-1"
+                >
+                  03
+                </div>
+                <div class="space-y-1">
+                  <h4
+                    class="text-sm tracking-wider uppercase font-medium text-luxuryText"
+                  >
+                    Desenvolvimento Visual
+                  </h4>
+                  <p class="text-xs text-luxuryGray editorial-text">
+                    Esboço ou modelagem em 3D do design do bolo, com refinamento
+                    de proporções, texturas e detalhes decorativos.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Passo 4 -->
+              <div class="flex space-x-6 items-start">
+                <div
+                  class="text-sm font-medium text-luxuryText border-b border-luxuryText/30 pb-1 mt-1"
+                >
+                  04
+                </div>
+                <div class="space-y-1">
+                  <h4
+                    class="text-sm tracking-wider uppercase font-medium text-luxuryText"
+                  >
+                    Produção Artesanal
+                  </h4>
+                  <p class="text-xs text-luxuryGray editorial-text">
+                    Execução minuciosa das receitas selecionadas e criação das
+                    esculturas ornamentais sob rígido controle de qualidade.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Passo 5 -->
+              <div class="flex space-x-6 items-start">
+                <div
+                  class="text-sm font-medium text-luxuryText border-b border-luxuryText/30 pb-1 mt-1"
+                >
+                  05
+                </div>
+                <div class="space-y-1">
+                  <h4
+                    class="text-sm tracking-wider uppercase font-medium text-luxuryText"
+                  >
+                    Entrega Personalizada
+                  </h4>
+                  <p class="text-xs text-luxuryGray editorial-text">
+                    Transporte climatizado seguro e arranjo final da peça no
+                    local da festa, garantindo o impacto visual ideal.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna de Imagem Premium -->
+          <div class="col-span-1 lg:col-span-6 reveal">
+            <div class="relative">
+              <div class="aspect-[4/5] overflow-hidden bg-neutral-100">
+                <Image
+                  src="https://images.unsplash.com/photo-1511018556340-d16986a1c194?auto=format&fit=crop&q=80&w=1200"
+                  alt="Processo de Finalização de Doce de Luxo"
+                  class="w-full h-full object-cover"
+                  width="1200"
+                  height="800"
+                />
+              </div>
+              <div
+                class="absolute -top-6 -left-6 w-1/2 aspect-square bg-champagne/40 -z-10"
+              >
+              </div>
+              <div
+                class="absolute -bottom-6 -right-6 w-1/3 aspect-square bg-sageSuave/30 -z-10"
+              >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DEPOIMENTOS (Carrossel Interativo) -->
+    <section class="py-24 bg-luxuryLight overflow-hidden">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <span
+            class="text-xs tracking-[0.2em] uppercase text-luxuryGray block mb-2"
+            >Relatos Reais</span
+          >
+          <h3 class="text-2xl font-light tracking-wide text-luxuryText">
+            Depoimentos dos Clientes
+          </h3>
+        </div>
+
+        <!-- Container do Carrossel -->
+        <div class="relative">
+          <div class="overflow-hidden">
+            <div
+              id="testimonialContainer"
+              class="flex transition-transform duration-500 ease-out"
+              style="transform: translateX(0%)"
+            >
+              <!-- Slide 1 -->
+              <div class="w-full shrink-0 px-4 md:px-12">
+                <div class="text-center space-y-6">
+                  <p
+                    class="text-lg md:text-2xl font-light tracking-normal leading-relaxed text-luxuryText italic max-w-3xl mx-auto"
+                  >
+                    "Uma experiência absolutamente impecável. O bolo foi o
+                    grande destaque da celebração. Todo o processo de
+                    atendimento, desde a curadoria de sabores até a montagem no
+                    buffet em Campo Grande, provou que a marca realmente preza
+                    pelo luxo silencioso."
+                  </p>
+                  <div
+                    class="text-xs tracking-[0.15em] uppercase font-medium text-luxuryGray"
+                  >
+                    — Helena M., Jardim dos Estados
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="w-full shrink-0 px-4 md:px-12">
+                <div class="text-center space-y-6">
+                  <p
+                    class="text-lg md:text-2xl font-light tracking-normal leading-relaxed text-luxuryText italic max-w-3xl mx-auto"
+                  >
+                    "Os doces finos pareciam verdadeiras joias lapidadas. O
+                    design minimalista e o uso equilibrado do açúcar nos
+                    surpreendeu. Nunca havíamos provado algo tão elegante e
+                    sofisticado. Uma joia da gastronomia em MS."
+                  </p>
+                  <div
+                    class="text-xs tracking-[0.15em] uppercase font-medium text-luxuryGray"
+                  >
+                    — Alexandre & Viviane, Wedding no Alphaville
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="w-full shrink-0 px-4 md:px-12">
+                <div class="text-center space-y-6">
+                  <p
+                    class="text-lg md:text-2xl font-light tracking-normal leading-relaxed text-luxuryText italic max-w-3xl mx-auto"
+                  >
+                    "O bolo escultural chamou a atenção de todos os convidados.
+                    Ele não era apenas lindo de se ver, mas incrivelmente leve e
+                    com sabor equilibrado. A fava de baunilha de Madagascar faz
+                    toda a diferença."
+                  </p>
+                  <div
+                    class="text-xs tracking-[0.15em] uppercase font-medium text-luxuryGray"
+                  >
+                    — Carolina S., Recepção Corporativa
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles do Carrossel -->
+          <div class="flex justify-center items-center space-x-6 mt-10">
+            <button
+              onclick="prevTestimonial()"
+              class="text-luxuryText/60 hover:text-luxuryText transition-colors duration-200"
+              aria-label="Depoimento Anterior"
+            >
+              <ArrowLeft class="w-5 h-5" />
+            </button>
+            <div id="carouselDots" class="flex space-x-2">
+              <!-- Dots dinâmicos -->
+              <span
+                onclick="setTestimonial(0)"
+                class="dot w-1.5 h-1.5 rounded-full bg-luxuryText cursor-pointer transition-all duration-300"
+              ></span>
+              <span
+                onclick="setTestimonial(1)"
+                class="dot w-1.5 h-1.5 rounded-full bg-luxuryText/20 cursor-pointer transition-all duration-300"
+              ></span>
+              <span
+                onclick="setTestimonial(2)"
+                class="dot w-1.5 h-1.5 rounded-full bg-luxuryText/20 cursor-pointer transition-all duration-300"
+              ></span>
+            </div>
+            <button
+              onclick="nextTestimonial()"
+              class="text-luxuryText/60 hover:text-luxuryText transition-colors duration-200"
+              aria-label="Próximo Depoimento"
+            >
+              <ArrowRight class="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO CTA -->
+    <section
+      class="py-20 lg:py-28 px-6 lg:px-16 bg-vanilla relative overflow-hidden"
+    >
+      <div class="max-w-4xl mx-auto text-center space-y-8 relative z-10 reveal">
+        <span class="text-xs tracking-[0.2em] uppercase text-luxuryGray block"
+          >Sua Celebração Memorável</span
+        >
+        <h2
+          class="text-3xl lg:text-5xl font-light tracking-tight text-luxuryText max-w-2xl mx-auto"
+        >
+          Sua próxima celebração merece algo inesquecível.
+        </h2>
+        <p
+          class="text-sm lg:text-base text-luxuryGray editorial-text max-w-xl mx-auto"
+        >
+          Desenvolvemos projetos sob demanda para casamentos, aniversários
+          especiais e recepções corporativas sofisticadas. Solicite hoje o seu
+          atendimento privativo.
+        </p>
+        <div class="pt-4">
+          <a
+            href="#encomendas"
+            class="luxury-button inline-block text-xs bg-luxuryText text-white px-10 py-5 hover:bg-white hover:text-luxuryText border border-luxuryText"
+          >
+            Solicitar Projeto Exclusivo
+          </a>
+        </div>
+      </div>
+      <!-- Círculos de fundo sutis simulando iluminação elegante -->
+      <div
+        class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-roseSophisticated/20 blur-3xl"
+      >
+      </div>
+      <div
+        class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-sageSuave/20 blur-3xl"
+      >
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO DE ENCOMENDA (ANTERIOR AO FOOTER) -->
+    <section
+      id="encomendas"
+      class="py-24 lg:py-32 px-6 lg:px-16 bg-white border-t border-luxuryText/5"
+    >
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center space-y-4 mb-16">
+          <span class="text-xs tracking-[0.2em] uppercase text-luxuryGray block"
+            >Planeje Conosco</span
+          >
+          <h2
+            class="text-3xl lg:text-4xl font-light tracking-tight text-luxuryText"
+          >
+            Solicitar Design Exclusivo
+          </h2>
+          <p class="text-xs text-luxuryGray/80 font-medium tracking-wide">
+            Preencha o briefing abaixo para iniciarmos a curadoria do seu bolo
+            ou doce autoral.
+          </p>
+        </div>
+
+        <!-- FORMULÁRIO DE BRIEFING -->
+        <form
+          id="orderForm"
+          onsubmit="handleFormSubmit(event)"
+          class="space-y-8"
+        >
+          <!-- Nome Completo -->
+          <div class="relative group">
+            <input
+              type="text"
+              id="name"
+              required
+              placeholder=" "
+              class="peer w-full bg-transparent border-b border-luxuryText/20 focus:border-luxuryText py-3 outline-none text-sm transition-all duration-300 placeholder-transparent"
+            />
+            <label
+              for="name"
+              class="absolute left-0 top-3 text-xs tracking-wider uppercase text-luxuryGray/60 transition-all duration-300 pointer-events-none peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-10px] peer-focus:text-[10px] peer-focus:text-luxuryText peer-[:not(:placeholder-shown)]:top-[-10px] peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-luxuryText"
+            >
+              Nome Completo
+            </label>
+          </div>
+
+          <!-- Duas colunas para contatos -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Telefone -->
+            <div class="relative group">
+              <input
+                type="tel"
+                id="phone"
+                required
+                placeholder=" "
+                class="peer w-full bg-transparent border-b border-luxuryText/20 focus:border-luxuryText py-3 outline-none text-sm transition-all duration-300 placeholder-transparent"
+              />
+              <label
+                for="phone"
+                class="absolute left-0 top-3 text-xs tracking-wider uppercase text-luxuryGray/60 transition-all duration-300 pointer-events-none peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-10px] peer-focus:text-[10px] peer-focus:text-luxuryText peer-[:not(:placeholder-shown)]:top-[-10px] peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-luxuryText"
+              >
+                Telefone
+              </label>
+            </div>
+
+            <!-- E-mail -->
+            <div class="relative group">
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder=" "
+                class="peer w-full bg-transparent border-b border-luxuryText/20 focus:border-luxuryText py-3 outline-none text-sm transition-all duration-300 placeholder-transparent"
+              />
+              <label
+                for="email"
+                class="absolute left-0 top-3 text-xs tracking-wider uppercase text-luxuryGray/60 transition-all duration-300 pointer-events-none peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-10px] peer-focus:text-[10px] peer-focus:text-luxuryText peer-[:not(:placeholder-shown)]:top-[-10px] peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-luxuryText"
+              >
+                E-mail
+              </label>
+            </div>
+          </div>
+
+          <!-- Detalhes do Evento -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Tipo de Evento -->
+            <div class="relative group">
+              <select
+                id="eventType"
+                required
+                class="peer w-full bg-transparent border-b border-luxuryText/20 focus:border-luxuryText py-3 outline-none text-sm transition-all duration-300 text-luxuryText"
+              >
+                <option value="" disabled selected class="text-luxuryGray/40">
+                  Selecione...
+                </option>
+                <option value="Casamento">Casamento</option>
+                <option value="Aniversário">Aniversário Especial</option>
+                <option value="Corporativo">Evento Corporativo</option>
+                <option value="Mini-Wedding">Mini Wedding</option>
+                <option value="Outros">Outros</option>
+              </select>
+              <label
+                for="eventType"
+                class="absolute left-0 top-[-10px] text-[10px] tracking-wider uppercase text-luxuryText"
+              >
+                Tipo de Evento
+              </label>
+            </div>
+
+            <!-- Data do Evento -->
+            <div class="relative group">
+              <input
+                type="date"
+                id="eventDate"
+                required
+                class="peer w-full bg-transparent border-b border-luxuryText/20 focus:border-luxuryText py-3 outline-none text-sm transition-all duration-300 text-luxuryText"
+              />
+              <label
+                for="eventDate"
+                class="absolute left-0 top-[-10px] text-[10px] tracking-wider uppercase text-luxuryText"
+              >
+                Data do Evento
+              </label>
+            </div>
+
+            <!-- Número de Convidados -->
+            <div class="relative group">
+              <input
+                type="number"
+                id="guests"
+                min="1"
+                required
+                placeholder=" "
+                class="peer w-full bg-transparent border-b border-luxuryText/20 focus:border-luxuryText py-3 outline-none text-sm transition-all duration-300 placeholder-transparent"
+              />
+              <label
+                for="guests"
+                class="absolute left-0 top-3 text-xs tracking-wider uppercase text-luxuryGray/60 transition-all duration-300 pointer-events-none peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-10px] peer-focus:text-[10px] peer-focus:text-luxuryText peer-[:not(:placeholder-shown)]:top-[-10px] peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-luxuryText"
+              >
+                Nº de Convidados
+              </label>
+            </div>
+          </div>
+
+          <!-- Sabores Desejados (Múltipla escolha elegante) -->
+          <div class="space-y-3">
+            <label
+              class="text-[10px] tracking-wider uppercase text-luxuryText block"
+              >Preferências de Paleta de Sabores</label
+            >
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+              <label
+                class="flex items-center space-x-2 cursor-pointer border border-gray-100 p-3 hover:bg-neutral-50 transition-colors"
+              >
+                <input
+                  type="checkbox"
+                  name="flavors"
+                  value="Baunilha Madagascar"
+                  class="rounded accent-luxuryText"
+                />
+                <span>Baunilha Bourbon</span>
+              </label>
+              <label
+                class="flex items-center space-x-2 cursor-pointer border border-gray-100 p-3 hover:bg-neutral-50 transition-colors"
+              >
+                <input
+                  type="checkbox"
+                  name="flavors"
+                  value="Pistache"
+                  class="rounded accent-luxuryText"
+                />
+                <span>Pistache Bronte</span>
+              </label>
+              <label
+                class="flex items-center space-x-2 cursor-pointer border border-gray-100 p-3 hover:bg-neutral-50 transition-colors"
+              >
+                <input
+                  type="checkbox"
+                  name="flavors"
+                  value="Chocolate Belga"
+                  class="rounded accent-luxuryText"
+                />
+                <span>Choc. Belga 70%</span>
+              </label>
+              <label
+                class="flex items-center space-x-2 cursor-pointer border border-gray-100 p-3 hover:bg-neutral-50 transition-colors"
+              >
+                <input
+                  type="checkbox"
+                  name="flavors"
+                  value="Curiaduria de Frutas"
+                  class="rounded accent-luxuryText"
+                />
+                <span>Frutas Vermelhas</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Descrição do Projeto -->
+          <div class="relative group">
+            <textarea
+              id="projectDesc"
+              rows="4"
+              required
+              placeholder=" "
+              class="peer w-full bg-transparent border-b border-luxuryText/20 focus:border-luxuryText py-3 outline-none text-sm transition-all duration-300 placeholder-transparent resize-none"
+            ></textarea>
+            <label
+              for="projectDesc"
+              class="absolute left-0 top-3 text-xs tracking-wider uppercase text-luxuryGray/60 transition-all duration-300 pointer-events-none peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-10px] peer-focus:text-[10px] peer-focus:text-luxuryText peer-[:not(:placeholder-shown)]:top-[-10px] peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-luxuryText"
+            >
+              Descreva o conceito de design desejado e detalhes adicionais
+            </label>
+          </div>
+
+          <!-- Botão de Envio -->
+          <div class="pt-6">
+            <button
+              type="submit"
+              class="w-full luxury-button bg-luxuryText text-white py-5 hover:bg-neutral-800 transition-colors text-xs"
+            >
+              Solicitar Encomenda
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- MODAL DE FEEDBACK (PROTÓTIPO NÃO FUNCIONAL) -->
+    <div
+      id="feedbackModal"
+      class="fixed inset-0 bg-luxuryText/60 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300"
+    >
+      <div
+        class="bg-white p-8 lg:p-12 max-w-md w-full mx-4 shadow-xl border border-luxuryText/5 text-center space-y-6 relative"
+      >
+        <button
+          onclick="closeModal()"
+          class="absolute top-4 right-4 text-luxuryGray hover:text-luxuryText"
+        >
+          <X class="w-5 h-5" />
+        </button>
+        <div
+          class="w-16 h-16 rounded-full bg-vanilla text-luxuryText flex items-center justify-center mx-auto"
+        >
+          <Info class="w-8 h-8" />
+        </div>
+        <div class="space-y-2">
+          <h4
+            class="text-lg tracking-wider uppercase font-medium text-luxuryText"
+          >
+            Nota do Protótipo
+          </h4>
+          <p class="text-xs text-luxuryGray leading-relaxed editorial-text">
+            Protótipo demonstrativo — formulário não funcional. As informações
+            não foram transmitidas, pois este site é uma maquete de design
+            conceitual para validação e aprovação do cliente.
+          </p>
+        </div>
+        <button
+          onclick="closeModal()"
+          class="w-full luxury-button bg-luxuryText text-white py-3 hover:bg-neutral-800 transition-colors text-xs"
+        >
+          Entendido
+        </button>
+      </div>
+    </div>
+
+    <!-- FOOTER EXTREMAMENTE LIMPO E EDITORIAL -->
+    <footer
+      class="bg-luxuryLight border-t border-luxuryText/5 py-16 lg:py-24 px-6 lg:px-16"
+    >
+      <div class="max-w-7xl mx-auto space-y-16">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-20"
+        >
+          <!-- Coluna 1: Logo e Institucional -->
+          <div class="lg:col-span-5 space-y-6">
+            <a
+              href="#inicio"
+              class="text-2xl font-light tracking-[0.2em] uppercase text-luxuryText block"
+            >
+              Pimp My Cake
+            </a>
+            <p
+              class="text-xs text-luxuryGray editorial-text max-w-sm leading-relaxed"
+            >
+              Confeitaria boutique e design autoral sob medida. Transformamos
+              ocasiões notáveis em momentos inesquecíveis através do sabor
+              requintado e do design escultural contemporâneo.
+            </p>
+            <p
+              class="text-[10px] text-luxuryGray/60 tracking-wider uppercase italic"
+            >
+              Protótipo conceitual desenvolvido para apresentação e aprovação do
+              cliente.
+            </p>
+          </div>
+
+          <!-- Coluna 2: Contato e Endereço -->
+          <div class="lg:col-span-4 space-y-4">
+            <h5
+              class="text-xs tracking-[0.2em] uppercase font-semibold text-luxuryText"
+            >
+              Atelier Privê
+            </h5>
+            <div class="space-y-3 text-xs text-luxuryGray leading-relaxed">
+              <p class="flex items-start space-x-2">
+                <MapPin class="w-4 h-4 shrink-0 text-luxuryText mt-0.5" />
+                <span
+                  >Rua Espírito Santo, 1450<br />Jardim dos Estados<br />Campo
+                  Grande/MS</span
+                >
+              </p>
+              <p class="flex items-center space-x-2">
+                <Phone class="w-4 h-4 shrink-0 text-luxuryText" />
+                <span>(67) 3333-0000</span>
+              </p>
+              <p class="flex items-center space-x-2">
+                <Mail class="w-4 h-4 shrink-0 text-luxuryText" />
+                <span>contato@pimpmycake.com.br</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Coluna 3: Links e Sociais -->
+          <div class="lg:col-span-3 space-y-4">
+            <h5
+              class="text-xs tracking-[0.2em] uppercase font-semibold text-luxuryText"
+            >
+              Canais de Inspiração
+            </h5>
+            <div class="flex flex-col space-y-3 text-xs text-luxuryGray">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener"
+                class="flex items-center space-x-2 hover:text-luxuryText transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-instagram w-4 h-4"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                  ></path>
+                </svg>
+                <span>Instagram</span>
+              </a>
+              <a
+                href="https://pinterest.com"
+                target="_blank"
+                rel="noopener"
+                class="flex items-center space-x-2 hover:text-luxuryText transition-colors"
+              >
+                <Bookmark class="w-4 h-4" />
+                <span>Pinterest</span>
+              </a>
+              <a
+                href="https://whatsapp.com"
+                target="_blank"
+                rel="noopener"
+                class="flex items-center space-x-2 hover:text-luxuryText transition-colors"
+              >
+                <MessageSquare class="w-4 h-4" />
+                <span>WhatsApp Atelier</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direitos e Créditos Finais -->
+        <div
+          class="pt-8 border-t border-luxuryText/5 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 text-[10px] tracking-wider uppercase text-luxuryGray/60"
+        >
+          <div>&copy; 2026 Pimp My Cake. Todos os direitos reservados.</div>
+          <div class="flex space-x-6">
+            <span>Quiet Luxury Design</span>
+            <span>Confeitaria Conceitual</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!-- JAVASCRIPT: Interatividade e UX -->
+<script is:inline>
+  // Scroll Event: Mudar comportamento do Header
+  window.addEventListener("scroll", function () {
+    const header = document.getElementById("header");
+    if (window.scrollY > 50) {
+      header.classList.add("header-scrolled");
+    } else {
+      header.classList.remove("header-scrolled");
+    }
+  });
+
+  // Menu Mobile (Toggle)
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mobileLinks = document.querySelectorAll(".mobile-link");
+
+  function toggleMenu() {
+    const isOpened = mobileMenu.classList.contains("translate-x-0");
+    if (isOpened) {
+      mobileMenu.classList.remove("translate-x-0");
+      mobileMenu.classList.add("translate-x-full");
+      menuBtn.innerHTML = '<Menu class="w-6 h-6" />';
+    } else {
+      mobileMenu.classList.remove("translate-x-full");
+      mobileMenu.classList.add("translate-x-0");
+      menuBtn.innerHTML = '<X class="w-6 h-6" />';
+    }
+    lucide.createIcons();
+  }
+
+  menuBtn.addEventListener("click", toggleMenu);
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("translate-x-0");
+      mobileMenu.classList.add("translate-x-full");
+      menuBtn.innerHTML = '<Menu class="w-6 h-6" />';
+      lucide.createIcons();
+    });
+  });
+
+  // Filtro da Galeria (Criações)
+  function filterGallery(category) {
+    // Atualizar classes dos botões
+    const buttons = document.querySelectorAll(".filter-btn");
+    buttons.forEach((btn) => {
+      btn.classList.remove("active", "border-luxuryText", "text-luxuryText");
+      btn.classList.add("border-transparent", "text-luxuryGray");
+    });
+
+    // Adicionar destaque ao botão atual
+    const clickedBtn = event.currentTarget;
+    clickedBtn.classList.remove("border-transparent", "text-luxuryGray");
+    clickedBtn.classList.add("active", "border-luxuryText", "text-luxuryText");
+
+    // Filtrar os elementos
+    const items = document.querySelectorAll(".gallery-item");
+    items.forEach((item) => {
+      if (category === "todos") {
+        item.style.display = "block";
+      } else {
+        if (item.classList.contains(category)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      }
+    });
+  }
+
+  // Controle do Carrossel de Depoimentos
+  let currentSlide = 0;
+  const totalSlides = 3;
+  const container = document.getElementById("testimonialContainer");
+  const dots = document.querySelectorAll(".dot");
+
+  function updateTestimonial() {
+    container.style.transform = `translateX(-${currentSlide * 100}%)`;
+    dots.forEach((dot, index) => {
+      if (index === currentSlide) {
+        dot.classList.remove("bg-luxuryText/20");
+        dot.classList.add("bg-luxuryText");
+      } else {
+        dot.classList.remove("bg-luxuryText");
+        dot.classList.add("bg-luxuryText/20");
+      }
+    });
+  }
+
+  function nextTestimonial() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateTestimonial();
+  }
+
+  function prevTestimonial() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateTestimonial();
+  }
+
+  function setTestimonial(index) {
+    currentSlide = index;
+    updateTestimonial();
+  }
+
+  // AutoPlay sutil para o carrossel (a cada 7 segundos)
+  setInterval(nextTestimonial, 7000);
+
+  // Formulário de Encomenda: Envio Fictício & Modal
+  function handleFormSubmit(event) {
+    event.preventDefault(); // Impede o recarregamento padrão do navegador
+
+    // Exibir o Modal customizado de forma fluida
+    const modal = document.getElementById("feedbackModal");
+    modal.classList.remove("opacity-0", "pointer-events-none");
+    modal.classList.add("opacity-100");
+
+    // Resetar opcionalmente o formulário
+    document.getElementById("orderForm").reset();
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("feedbackModal");
+    modal.classList.remove("opacity-100");
+    modal.classList.add("opacity-0", "pointer-events-none");
+  }
+
+  // Revelar Elementos Sutilmente no Scroll (Motion Design)
+  function reveal() {
+    const reveals = document.querySelectorAll(".reveal");
+    reveals.forEach((element) => {
+      const windowHeight = window.innerHeight;
+      const elementTop = element.getBoundingClientRect().top;
+      const elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        element.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", reveal);
+  // Rodar no load para elementos que já estão na tela de cara
+  window.addEventListener("load", reveal);
+</script>
+
+<style>
+  /* Estilos adicionais e refinamentos baseados no PRD */
+  body {
+    color: #2f2f2f;
+    background-color: #ffffff;
+    font-family: "Inter", sans-serif;
+  }
+
+  .hero-title {
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    font-size: clamp(38px, 6.5vw, 84px);
+    line-height: 1.1;
+  }
+
+  .luxury-button {
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .editorial-text {
+    font-weight: 400;
+    line-height: 1.9;
+  }
+
+  /* Efeito de transição suave do Header */
+  .header-scrolled {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(47, 47, 47, 0.06);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /* Ocultar barra de rolagem horizontal se houver e aplicar transições fluidas */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Animação suave para fade in */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s ease;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
